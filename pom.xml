@@ -56,7 +56,7 @@
                     <!--    <licenses>
                             <autoDiscover>true</autoDiscover>
                             <includePublishedArtifacts>false</includePublishedArtifacts>
-                            <runChecks>true</runChecks>
+                           
                             <scopes>compile,runtime</scopes>
                             <violationRecipients>build@organisation.com</violationRecipients>
                         </licenses> -->

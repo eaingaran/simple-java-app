@@ -25,9 +25,9 @@ pipeline  {
         sh "mvn -DskipTests package"
       }
     }
-    stage('timepass')  {
+    stage('publish')  {
       steps {
-        sh 'echo "im just testing"'
+        sh 'mvn publish'
       }
     }
     stage('Deploy') {

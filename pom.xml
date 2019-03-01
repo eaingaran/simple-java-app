@@ -46,9 +46,9 @@
                     </goals>
                     <configuration>
                         <publisher>
-                            <contextUrl>http://54.218.12.85:8081/artifactory/</contextUrl>
+                            <contextUrl>http://54.218.12.85:8081/artifactory</contextUrl>
                             <username>admin</username>
-                            <password>AP7XnZpLARNSburxrfFncTn5q6R</password>
+                            <password>AP3FBGSctQB7PMkRdHSypbQjuVB</password>
                             <excludePatterns>*-tests.jar</excludePatterns>
                             <repoKey>libs-release-local</repoKey>
                             <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>

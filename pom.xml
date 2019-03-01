@@ -48,7 +48,7 @@
                         <publisher>
                             <contextUrl>http://54.218.12.85:8081/artifactory</contextUrl>
                             <username>admin</username>
-                            <password>password</password>
+                            <password>AP7XnZpLARNSburxrfFncTn5q6R</password>
                             <excludePatterns>*-tests.jar</excludePatterns>
                             <repoKey>libs-release-local</repoKey>
                             <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>

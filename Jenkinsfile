@@ -5,9 +5,24 @@ pipeline  {
     jdk 'jdk1.8.0'
   }
   stages  {
-    stage('Build')  {
+    stage('clean')  {
       steps {
-        sh "mvn -B -DskipTests clean package"
+        sh "mvn clean"
+      }
+    }
+    stage('compile')  {
+      steps {
+        sh "mvn compile"
+      }
+    }
+    stage('test')  {
+      steps {
+        sh "mvn test"
+      }
+    }
+    stage('package')  {
+      steps {
+        sh "mvn -DskipTests package"
       }
     }
     stage('Deploy') {

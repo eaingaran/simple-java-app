@@ -27,7 +27,7 @@ pipeline  {
     }
     stage('publish')  {
       steps {
-        sh 'echo "publishing..."'
+        sh 'mvn deploy'
       }
     }
     stage('deploy') {

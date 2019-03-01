@@ -15,6 +15,14 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <pluginRepositories>
+    <pluginRepository>
+      <id>Maven-Artifactory-Plugin</id>
+      <url>https://jcenter.bintray.com</url>
+    </pluginRepository>
+  </pluginRepositories>
+  
   <build>
     <plugins>
       <plugin>
@@ -32,6 +40,37 @@
           </archive>
         </configuration>
       </plugin>
+        <plugin>
+            <groupId>org.jfrog.buildinfo</groupId>
+            <artifactId>artifactory-maven-plugin</artifactId>
+            <version>2.6.1</version>
+            <inherited>false</inherited>
+            <executions>
+                <execution>
+                    <id>build-info</id>
+                    <goals>
+                        <goal>publish</goal>
+                    </goals>
+                    <configuration>
+                        <publisher>
+                            <contextUrl>http://54.218.12.85:8081/artifactory</contextUrl>
+                            <username>${username}</username>
+                            <password>${password}</password>
+                            <excludePatterns>*-tests.jar</excludePatterns>
+                            <repoKey>libs-release-local</repoKey>
+                            <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+                        </publisher>
+                    <!--    <licenses>
+                            <autoDiscover>true</autoDiscover>
+                            <includePublishedArtifacts>false</includePublishedArtifacts>
+                            <runChecks>true</runChecks>
+                            <scopes>compile,runtime</scopes>
+                            <violationRecipients>build@organisation.com</violationRecipients>
+                        </licenses> -->
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
     </plugins>
   </build>
 </project>

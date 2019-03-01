@@ -30,6 +30,18 @@ pipeline  {
         rtPublishBuildInfo (
           serverId: "artifactory"
         )
+        rtUpload (
+          serverId: "artifactory",
+          spec:
+              """{
+                "files": [
+                  {
+                    "pattern": "target/*.jar",
+                    "target": "libs-snapshot-local/com/mycompany/app/my-app/"
+                  }
+               ]
+              }"""
+        )
       }
     }
     stage('deploy') {

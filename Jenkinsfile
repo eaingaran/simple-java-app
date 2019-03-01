@@ -25,12 +25,12 @@ pipeline  {
         sh "mvn -DskipTests package"
       }
     }
-    stage('publish')  {
+    stage('deploy')  {
       steps {
-        sh 'mvn publish'
+        sh 'mvn deploy'
       }
     }
-    stage('Deploy') {
+    stage('execute') {
       steps {
         sh "java -jar target/my-app-1.0-SNAPSHOT.jar"
       }

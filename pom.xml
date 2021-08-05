@@ -68,6 +68,16 @@
   </build>
   <repositories>
         <repository>
+          <id>SuperLeagueDevOpsTest</id>
+          <url>https://pkgs.dev.azure.com/SuperLeagueDevOpsTest/_packaging/SuperLeagueDevOpsTest/maven/v1</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+        <repository>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>

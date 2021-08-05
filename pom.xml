@@ -33,37 +33,6 @@
           </archive>
         </configuration>
       </plugin>
-        <plugin>
-            <groupId>org.jfrog.buildinfo</groupId>
-            <artifactId>artifactory-maven-plugin</artifactId>
-            <version>2.6.1</version>
-            <inherited>false</inherited>
-            <executions>
-                <execution>
-                    <id>build-info</id>
-                    <goals>
-                        <goal>publish</goal>
-                    </goals>
-                    <configuration>
-                      <!--   <publisher>
-                            <contextUrl>https://pkgs.dev.azure.com/SuperLeagueDevOpsTest/_packaging/SuperLeagueDevOpsTest/maven/v1</contextUrl>
-                            <username>SuperLeagueDevOpsTest</username>
-                            <password>ekb54nifhlg247hhiyp4as2kbpwexrp333tcu6by6oulo2zdddbq</password>
-                            <excludePatterns>*-tests.jar</excludePatterns>
-                            <repoKey>libs-release-local</repoKey>
-                            <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
-                        </publisher>-->
-                    <!--    <licenses>
-                            <autoDiscover>true</autoDiscover>
-                            <includePublishedArtifacts>false</includePublishedArtifacts>
-                           
-                            <scopes>compile,runtime</scopes>
-                            <violationRecipients>build@organisation.com</violationRecipients>
-                        </licenses> -->
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
     </plugins>
   </build>
   <distributionManagement>

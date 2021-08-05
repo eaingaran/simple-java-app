@@ -50,8 +50,8 @@
                             <username>SuperLeagueDevOpsTest</username>
                             <password>ekb54nifhlg247hhiyp4as2kbpwexrp333tcu6by6oulo2zdddbq</password>
                             <excludePatterns>*-tests.jar</excludePatterns>
-                   <!--         <repoKey>libs-release-local</repoKey>
-                            <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey> -->
+                            <repoKey>libs-release-local</repoKey>
+                            <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
                         </publisher>
                     <!--    <licenses>
                             <autoDiscover>true</autoDiscover>

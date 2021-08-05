@@ -46,13 +46,13 @@
                     </goals>
                     <configuration>
                         <publisher>
-                            <contextUrl>http://54.218.12.85:8081/artifactory</contextUrl>
-                            <username>admin</username>
-                            <password>AP3FBGSctQB7PMkRdHSypbQjuVB</password>
+                            <contextUrl>https://pkgs.dev.azure.com/SuperLeagueDevOpsTest/_packaging/SuperLeagueDevOpsTest/maven/v1</contextUrl>
+                            <username>SuperLeagueDevOpsTest</username>
+                            <password>ekb54nifhlg247hhiyp4as2kbpwexrp333tcu6by6oulo2zdddbq</password>
                             <excludePatterns>*-tests.jar</excludePatterns>
-                            <repoKey>libs-release-local</repoKey>
+                   <!--         <repoKey>libs-release-local</repoKey>
                             <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
-                        </publisher>
+                        </publisher>-->
                     <!--    <licenses>
                             <autoDiscover>true</autoDiscover>
                             <includePublishedArtifacts>false</includePublishedArtifacts>
@@ -66,6 +66,18 @@
         </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+      <repository>
+        <id>SuperLeagueDevOpsTest</id>
+        <url>https://pkgs.dev.azure.com/SuperLeagueDevOpsTest/_packaging/SuperLeagueDevOpsTest/maven/v1</url>
+        <releases>
+          <enabled>true</enabled>
+        </releases>
+        <snapshots>
+          <enabled>true</enabled>
+        </snapshots>
+      </repository>
+  </distributionManagement>
   <repositories>
         <repository>
           <id>SuperLeagueDevOpsTest</id>

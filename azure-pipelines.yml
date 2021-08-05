@@ -10,6 +10,10 @@ pool:
   name: My Pipeline Pool
 
 steps:
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+    projectName: 'ProjectSimple'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'

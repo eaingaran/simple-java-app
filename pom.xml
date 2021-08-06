@@ -46,6 +46,17 @@
           </archive>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <executions>
+            <!-- disable standard deploy -->
+            <execution>
+                <id>default-deploy</id>
+                <phase>none</phase>
+            </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
   <distributionManagement>
